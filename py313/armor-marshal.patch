@@ -23,6 +23,15 @@ index 1fb8cc4..3e1ab3b 100644
      /* mapping frame offsets to information */
      PyObject *localsplusnames;  // Tuple of strings
      PyObject *localspluskinds;  // Bytes object, one byte per variable
+@@ -315,7 +317,7 @@ extern void _PyCode_Clear_Executors(PyCodeObject *code);
+ // gh-115999 tracks progress on addressing this.
+ #define ENABLE_SPECIALIZATION 0
+ #else
+-#define ENABLE_SPECIALIZATION 1
++#define ENABLE_SPECIALIZATION 0
+ #endif
+ 
+ /* Specialization functions */
 diff --git a/Objects/codeobject.c b/Objects/codeobject.c
 index bdf6ee9..4a28f4a 100644
 --- a/Objects/codeobject.c
